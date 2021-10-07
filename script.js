@@ -3,49 +3,157 @@ const checkNumbers = function (number){
  if (Getal<100){
    return "false";
 }else return "true";
- 
- 
-}
-const result1 = checkNumbers (120);
-console.log (result1);
 
-const result2 = checkNumbers (10);
-console.log (result2);
+}
+console.log (checkNumbers(120)); //true
+console.log (checkNumbers(10)); //false
 
 //Now think about the categories of functions we discussed: functions that do something and functions that produce something. What kind of function is this?
-//do something want er komen niet 1 of meer waardes eruit zoals een rekenmachine
+//produceert wat want heeft geen console.log nodig
 
 
 
 /*
- To make these decisions we'll give Brenda the following arguments:
+ 3 argumenten inzetten zodat Brenda beslist of je in mag, te druk is of niet mag binnenkomen:
  
  the maximum number of people in the club 10
- the current number of people in the club 2
+ the current number of people in the club varieert
  the age of the person wanting to enter the club 18
  */
 
 
 
-const Brenda = function (people){ 
-  if (people <10){
-    return "come in";
- } else return "It's too busy now, come back late"
-  
- };
+ const getBouncerReaction = function(
+  maxBezoekers,
+  huidigeBezoekers,
+  leeftijd) 
+  {
+  if (leeftijd < 18) {
+      return "this is a club for adults";
+  }
 
- const result3 = Brenda (100);
- console.log (result3);
- 
- const result4 = Brenda (10);
- console.log (result4);
+  if (huidigeBezoekers<= maxBezoekers) {
+      return "come in";
+  } else {
+      return "it's too busy now, come back later";
+  }
+};
+
+console.log(getBouncerReaction(10, 2,8)); // "this is a club for adults"
+console.log(getBouncerReaction(10, 5, 34)); // "come in"
+console.log(getBouncerReaction(10, 45, 40)); // "it's too busy now, come back later"
+console.log(getBouncerReaction(10, 23, 35)); // "it's too busy now, come back later"
 
 
- const average = function (numberA, numberB, numberC, numberD,numberE){
-   const total = numberA+ numberB+ numberC + numberD + numberE;
-   const calaverage= total/5;
-   return 
- }
- const result5 = average ([1,7,5,8,4]);
- console.log (result5);
+//Now think about the categories of functions we discussed: functions that do something and functions that produce something. What kind of function is this? doet iets want geeft een alert
+
+//function dat gemiddelde berekent van 5 nummers
+ const GemiddeldeBerekenen = function(
+  number1,
+  number2,
+  number3,
+  number4,
+  number5
+) {
+  const totaal = number1 + number2 + number3 + number4 + number5;
+  const gemiddelde = totaal / 5;
+  return gemiddelde;
+};
+
+console.log(GemiddeldeBerekenen(9, 8, 6, 3, 1)); // 5,4
+console.log(GemiddeldeBerekenen(8, 0, 3, 5, 5)); // 4,2
+console.log(GemiddeldeBerekenen(780, 8, 5, 90, 56)); // 187,8
+
+//afronden getallen van het gemiddelden
+const GemiddeldeBerekenen2 = function(
+  number1,
+  number2,
+  number3,
+  number4,
+  number5
+) {
+  const totaal2 = number1 + number2 + number3 + number4 + number5;
+  const gemiddelde2 = totaal2 / 5;
+  const gemiddeldeAfgerond = Math.round(gemiddelde2);
+  return gemiddeldeAfgerond;
+};
+
+console.log(GemiddeldeBerekenen2(9, 8, 6, 3, 1)); // 5
+console.log(GemiddeldeBerekenen2(8, 0, 3, 5, 5)); // 4
+console.log(GemiddeldeBerekenen2(780, 8, 5, 90, 56)); // 188
+
+//Now think about the categories of functions we discussed: functions that do something and functions that produce something. What kind of function is this? produceert iets want berekent uit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
